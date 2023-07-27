@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('checklists', function (Blueprint $table) {
             $table->id();
+            $table->string('name')->nullable(false);
+            $table->integer('status')->nullable(false)->default(0);
             $table->timestamps();
         });
     }
